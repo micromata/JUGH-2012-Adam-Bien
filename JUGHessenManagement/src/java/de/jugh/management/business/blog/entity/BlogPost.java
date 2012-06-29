@@ -27,6 +27,11 @@ public class BlogPost {
 
     public BlogPost() {
     }
+
+    @Override
+    public String toString() {
+        return "BlogPost{" + "id=" + id + ", title=" + title + '}';
+    }
     
     
     

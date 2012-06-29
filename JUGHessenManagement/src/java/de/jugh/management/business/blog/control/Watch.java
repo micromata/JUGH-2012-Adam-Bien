@@ -7,8 +7,14 @@ import java.util.Date;
  * @author adam bien, adam-bien.com
  */
 public class Watch {
+    
+    private boolean precision;
+    
+    public Watch(boolean precision){
+        this.precision = precision;
+    }
 
-    public Date getTime(){
-        return new Date();
+    public String getTime(){
+        return new Date() + "Precize: " + precision; 
     }
 }
