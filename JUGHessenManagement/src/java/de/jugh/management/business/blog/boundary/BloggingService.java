@@ -32,10 +32,11 @@ public class BloggingService {
         System.out.println("Creating BloggingService");
     }
     
-    public String getPost(){
+    public BlogPost getPost(){
         String msg = "from db "+ watch.getTime();
-        em.persist(new BlogPost(msg));
-        return msg;
+        final BlogPost blogPost = new BlogPost(msg);
+        em.persist(blogPost);
+        return blogPost;
     }
     
 }

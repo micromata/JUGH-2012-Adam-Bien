@@ -19,7 +19,7 @@ public class Index {
     }
     
     public String getMessage(){
-        return this.bs.getPost();
+        return this.bs.getPost().toString();
     }
     
 }
