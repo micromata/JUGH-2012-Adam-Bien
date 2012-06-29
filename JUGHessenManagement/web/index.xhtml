@@ -7,6 +7,10 @@
     </h:head>
     <h:body>
         #{index.message}
+        <br/>
+        <h:form>
+            <h:commandButton action="#{index.post()}" value="Post"/>
+        </h:form>
     </h:body>
 </html>
 

@@ -13,6 +13,7 @@ public class Index {
     @Inject 
     BloggingService bs;
     
+    
     @PostConstruct
     public void init(){
         System.out.println("Creating index");
@@ -20,6 +21,11 @@ public class Index {
     
     public String getMessage(){
         return this.bs.getPost().toString();
+    }
+    
+    public Object post(){
+        this.bs.post("from jsf");
+        return null;
     }
     
 }

@@ -1,5 +1,6 @@
 package de.jugh.management.business.blog;
 
+import javax.inject.Inject;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.InvocationContext;
 
@@ -9,6 +10,8 @@ import javax.interceptor.InvocationContext;
  */
 public class RegistrationAudit {
 
+    @Inject
+    private String audit;
 
     @AroundInvoke
     public Object audit(InvocationContext ic) throws Exception{
@@ -16,7 +19,7 @@ public class RegistrationAudit {
         try{
             return ic.proceed();
         }finally{
-            System.out.println(" " + ic.getMethod() + " in " + (System.currentTimeMillis()-start));
+            System.out.println(audit + ic.getMethod() + " in " + (System.currentTimeMillis()-start));
         }
         
     }

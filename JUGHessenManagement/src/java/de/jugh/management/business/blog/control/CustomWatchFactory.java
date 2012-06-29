@@ -13,6 +13,8 @@ import javax.enterprise.inject.Specializes;
  */
 public class CustomWatchFactory extends WatchFactory{
 
+    
+    
     @Override @Produces @Specializes
     public Watch hugo() {
         return new Watch(false);
